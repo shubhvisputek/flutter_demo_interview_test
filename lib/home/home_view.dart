@@ -113,10 +113,6 @@ class HomeView extends GetView<HomeController> {
             (c) => Obx(
               () => getFeaturesMenu(),
             ),
-            // SingleChildScrollView(
-            //   scrollDirection: Axis.horizontal,
-            //   child:
-            // ),
           );
         }
         controller.onFloatingActionTapped();
@@ -187,7 +183,7 @@ class HomeView extends GetView<HomeController> {
               : Padding(
                   padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
                   child: Divider(
-                      height: 1, color: Colors.grey.shade600, thickness: 1),
+                      height: 1, color: Colors.grey.shade600, thickness: 1,),
                 ),
           getGridFeatures(),
         ],
@@ -219,11 +215,10 @@ class HomeView extends GetView<HomeController> {
         child: isVertical
             ? Column(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: imageWithText)
+                children: imageWithText,)
             : Row(
                 mainAxisAlignment: MainAxisAlignment.center,
-                // crossAxisAlignment: CrossAxisAlignment.center,
-                children: imageWithText),
+                children: imageWithText,),
       ),
     );
   }
@@ -283,9 +278,7 @@ class HomeView extends GetView<HomeController> {
         Container(
           width: Get.width - 20,
           height: 40,
-          // constraints: BoxConstraints(minHeight: 40, maxHeight: 40),
           decoration: BoxDecoration(
-            // color: Colors.grey,
             border: Border.all(
               color: Colors.transparent,
               width: 1,
